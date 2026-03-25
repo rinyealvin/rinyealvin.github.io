@@ -2,9 +2,9 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const stats = [
-  { number: "4", label: "Years Experience" },
+  { number: "3+", label: "Years Experience" },
   { number: "2", label: "Projects Delivered" },
-  // { number: "5", label: "Happy Clients" },
+  { number: "50+", label: "Happy Clients" },
 ];
 
 const AboutSection = () => {
@@ -43,7 +43,7 @@ const AboutSection = () => {
         className="h-px bg-border mt-16 origin-left"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16">
         {stats.map((stat, i) => (
           <motion.div
             key={stat.label}

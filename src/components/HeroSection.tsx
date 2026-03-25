@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
-import profileHero from "@/assets/profile-hero.png";
+import profileHero from "@/assets/Profile.png";
 
 const HeroSection = () => {
   const [isMoving, setIsMoving] = useState(false);
@@ -78,7 +78,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-muted-foreground font-body text-sm md:text-base tracking-widest uppercase mb-6"
         >
-          Creative Developer & Designer
+          Software Engineer
         </motion.p>
 
         <motion.h1
@@ -87,9 +87,9 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-5xl md:text-7xl lg:text-[8rem] font-bold leading-[0.9] tracking-tight"
         >
-          <span className="text-foreground">JOHN</span>
+          <span className="text-foreground">ALVIN</span>
           <br />
-          <span className="text-gradient">DOE</span>
+          <span className="text-gradient">RINYE</span>
         </motion.h1>
 
         <motion.div
@@ -105,7 +105,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 1.4 }}
           className="flex items-center justify-between mt-6"
         >
-          <p className="text-muted-foreground text-sm font-body">Based in San Francisco, CA</p>
+          <p className="text-muted-foreground text-sm font-body">Based in Ebene-CyberCity, Mauritius</p>
           <motion.a
             href="#work"
             whileHover={{ x: 5 }}

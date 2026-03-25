@@ -56,7 +56,7 @@ const ContactSection = () => {
           © 2026 Alvin Rinye. All rights reserved.
         </p>
         <div className="flex items-center gap-8">
-          {["GitHub", "LinkedIn", "Twitter", "Dribbble"].map((link) => (
+          {["GitHub", "LinkedIn"].map((link) => (
             <a
               key={link}
               href="#"

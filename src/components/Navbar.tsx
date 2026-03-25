@@ -23,7 +23,7 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 section-padding py-6 flex items-center justify-between mix-blend-difference"
     >
       <a href="#" className="font-display text-xl font-bold text-foreground tracking-tight">
-        JD<span className="text-gradient">.</span>
+        Rinye Alvin Ngamau<span className="text-gradient">.</span>
       </a>
 
       {/* Desktop nav */}
