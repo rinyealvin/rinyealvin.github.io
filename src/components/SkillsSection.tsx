@@ -1,18 +1,60 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const skills = [
-  { name: "C++", category: "Languages" },
-  { name: ".NET", category: "Frameworks" },
-  { name: "Java", category: "Languages" },
-  { name: "Node.js", category: "Runtime" },
-  { name: "React", category: "Frameworks" },
-  { name: "Vue", category: "Frameworks" },
-  { name: "Snaplogic", category: "Integration" },
-  { name: "Server Deployment", category: "DevOps" },
-  { name: "CI/CD Pipelines", category: "DevOps" },
-  { name: "Spring Boot", category: "Frameworks" },
-];
+  const skills = [
+    // Languages
+    { name: "Java", category: "Languages" },
+    { name: "JavaScript", category: "Languages" },
+    { name: "SQL", category: "Languages" },
+    { name: "C++", category: "Languages" },
+
+    // Frameworks & Libraries
+    { name: "Spring Boot", category: "Frameworks" },
+    { name: "Vue", category: "Frameworks" },
+    { name: "React", category: "Frameworks" },
+    { name: ".NET", category: "Frameworks" },
+
+    // Runtime & Backend
+    { name: "Node.js", category: "Runtime" },
+    { name: "REST API Development", category: "Backend" },
+    { name: "Microservices Architecture", category: "Backend" },
+
+    // Database & Data
+    { name: "MySQL", category: "Database" },
+    { name: "PostgreSQL", category: "Database" },
+    { name: "Oracle DB", category: "Database" },
+    { name: "MongoDB", category: "Database" },
+    { name: "Database Design", category: "Database" },
+    { name: "Query Optimization", category: "Database" },
+
+    // DevOps & Version Control
+    { name: "Git", category: "DevOps" },
+    { name: "GitHub", category: "DevOps" },
+    { name: "Bitbucket", category: "DevOps" },
+    { name: "Azure DevOps", category: "DevOps" },
+    { name: "CI/CD Pipelines", category: "DevOps" },
+    { name: "Server Deployment", category: "DevOps" },
+
+    // Tools & Development Environment
+    { name: "IntelliJ IDEA", category: "Tools" },
+    { name: "Eclipse IDE", category: "Tools" },
+    { name: "Visual Studio", category: "Tools" },
+    { name: "VS Code", category: "Tools" },
+    { name: "Android Studio", category: "Tools" },
+    { name: "DataGrip", category: "Tools" },
+    { name: "Maven", category: "Tools" },
+
+    // API & Integration
+    { name: "Postman", category: "API Tools" },
+    { name: "Swagger / OpenAPI", category: "API Tools" },
+    { name: "API Testing", category: "API Tools" },
+    { name: "SnapLogic", category: "Integration" },
+
+    // Operating Systems
+    { name: "Linux", category: "Environment" },
+    { name: "macOS", category: "Environment" },
+    { name: "Windows", category: "Environment" },
+  ];
 
 const SkillsSection = () => {
   const ref = useRef(null);
