@@ -3,29 +3,19 @@ import { useRef } from "react";
 
 const projects = [
   {
-    title: "Nova Dashboard",
-    category: "Web App · UI/UX",
+    title: "Chamify Africa",
+    category: "Web Application",
+    year: "2024",
+    link: "https://chamify.africa",
+    description: "Chamify is a user-friendly platform that helps individuals and groups save, invest, and access loans; all in one place. We make it easier to reach your financial goals, whether you're saving alone or with others.",
+  },
+  {
+    title: "NdovuPay",
+    category: "Web Application",
     year: "2025",
-    description: "A real-time analytics dashboard with immersive data visualizations and dark-mode-first design.",
-  },
-  {
-    title: "Meridian Studio",
-    category: "Branding · Website",
-    year: "2024",
-    description: "Full brand identity and portfolio site for a boutique architecture firm.",
-  },
-  {
-    title: "Pulse Fitness",
-    category: "Mobile · Design System",
-    year: "2024",
-    description: "Cross-platform fitness tracking app with a comprehensive component library.",
-  },
-  {
-    title: "Aether Commerce",
-    category: "E-Commerce · Full Stack",
-    year: "2023",
-    description: "High-performance headless commerce platform with sub-second page loads.",
-  },
+    link: "https://ndovupay.org",
+    description: "NdovuPay is a secure and efficient payment gateway designed for African businesses. It enables seamless online transactions, supporting multiple payment methods to help businesses grow and thrive in the digital economy.",
+  }
 ];
 
 const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => {
@@ -61,7 +51,14 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
           className="mt-3 text-muted-foreground group-hover:text-primary transition-colors duration-300"
           whileHover={{ x: 5 }}
         >
-          <span className="text-2xl">→</span>
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl"
+          >
+            →
+          </a>
         </motion.div>
       </div>
     </motion.div>

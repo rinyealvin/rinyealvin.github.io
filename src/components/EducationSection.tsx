@@ -3,16 +3,16 @@ import { useRef } from "react";
 
 const education = [
   {
-    degree: "B.Sc. Computer Science",
-    school: "University of Technology",
-    period: "2014 — 2018",
-    description: "Graduated with honors. Focused on software engineering, algorithms, and human-computer interaction.",
+    degree: "Bachelor of Business Information Technology",
+    school: "KCA University - Nairobi, Kenya",
+    period: "2020 — 2024",
+    description: "Graduated with Second Class Honors ~ Upper Division. Focused on software engineering, algorithms, and human-computer interaction.",
   },
   {
-    degree: "High School Diploma",
-    school: "Springfield Academy",
-    period: "2010 — 2014",
-    description: "Excelled in mathematics and sciences. Led the school's coding club and robotics team.",
+    degree: "High School - KCSE",
+    school: "St. Mary's Boys Secondary School - Nyeri, Kenya",
+    period: "2016 — 2019",
+    description: "Excelled in computer studies, delivering a strong final year project recognized for its quality."
   },
 ];
 

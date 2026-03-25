@@ -1,10 +1,11 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import { FileText, Download } from "lucide-react";
 
 const CVSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section id="cv" className="py-24 md:py-40 section-padding" ref={ref}>
@@ -26,24 +27,22 @@ const CVSection = () => {
         className="mt-16 max-w-xl"
       >
         <p className="text-muted-foreground font-body text-base md:text-lg leading-relaxed mb-8">
-          Interested in my full background? Download my CV to see my complete work history, education, and certifications.
+          Interested in my full background? Download/View my CV to see my complete work history, education, and certifications.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
-          <motion.a
-            href="/cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+          <motion.button
+            onClick={() => setIsOpen(true)}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-display font-semibold tracking-wide transition-shadow duration-300 hover:shadow-[0_0_30px_hsl(45_100%_58%/0.3)]"
           >
             <FileText className="w-5 h-5" />
             View CV
-          </motion.a>
+          </motion.button>
 
           <motion.a
-            href="/cv.pdf"
+            href="/CV.pdf"
             download
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -52,6 +51,28 @@ const CVSection = () => {
             <Download className="w-5 h-5" />
             Download CV
           </motion.a>
+
+          {isOpen && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+
+              <div className="relative w-[90%] h-[90%] bg-background rounded-xl overflow-hidden shadow-2xl">
+
+                {/* Close button */}
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="absolute top-4 right-4 z-10 bg-black/60 text-white px-3 py-1 rounded-lg hover:bg-black"
+                >
+                  ✕
+                </button>
+
+                {/* PDF Viewer */}
+                <iframe
+                  src="/CV.pdf"
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+          )}
         </div>
       </motion.div>
     </section>

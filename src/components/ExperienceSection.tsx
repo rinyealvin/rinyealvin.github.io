@@ -3,22 +3,28 @@ import { useRef } from "react";
 
 const experiences = [
   {
-    role: "Senior Frontend Developer",
-    company: "TechCorp Inc.",
-    period: "2022 — Present",
-    description: "Leading the frontend team in building scalable web applications with React and TypeScript.",
+    role: "Software Engineer",
+    company: "Cybernaptics Ltd - Port Louis, Mauritius",
+    period: "February 2025 - Present",
+    description: "Consulting for SWAN Insurance to deliver enterprise software solutions across design, development, and system integration.",
   },
   {
-    role: "Full Stack Developer",
-    company: "Creative Agency",
-    period: "2020 — 2022",
-    description: "Built end-to-end digital products for global brands, focusing on performance and design.",
+    role: "Software Engineer",
+    company: "Smart People Africa - Nairobi, Kenya",
+    period: "April 2024 - February 2025",
+    description: "Designed and maintained scalable backend systems and web applications with focus on performance, security, and integration.",
   },
   {
-    role: "Junior Developer",
-    company: "StartupHub",
-    period: "2018 — 2020",
-    description: "Developed MVPs and prototypes in fast-paced startup environments.",
+    role: "ICT Support Intern",
+    company: "Nyandarua County Government - Nyandarua, Kenya",
+    period: "May - August 2023",
+    description: "Supported ICT operations, including systems, networks, and basic server programming, ensuring efficient service delivery.",
+  },
+  {
+    role: "Hospital Administrative Assistant",
+    company: "Pope Benedict XVI Hospital - Nyahururu",
+    period: "January - September 2020",
+    description: "Handled hospital roles including records, patient service, billing, and pharmaceutical stock management",
   },
 ];
 

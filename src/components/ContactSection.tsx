@@ -4,6 +4,11 @@ import { useRef } from "react";
 const ContactSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const socialLinks = [
+    { name: "GitHub", url: "https://github.com/rinyealvin" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/alvin-rinye-b47718288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+    { name: "WhatsApp", url: "https://wa.me/23055190781" },
+  ];
 
   return (
     <section id="contact" className="py-24 md:py-40 section-padding" ref={ref}>
@@ -56,13 +61,15 @@ const ContactSection = () => {
           © 2026 Alvin Rinye. All rights reserved.
         </p>
         <div className="flex items-center gap-8">
-          {["GitHub", "LinkedIn"].map((link) => (
+          {socialLinks.map((link) => (
             <a
-              key={link}
-              href="#"
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground font-body text-xs tracking-wide uppercase transition-colors duration-300"
             >
-              {link}
+              {link.name}
             </a>
           ))}
         </div>
