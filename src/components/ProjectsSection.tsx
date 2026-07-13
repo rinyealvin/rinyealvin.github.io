@@ -2,19 +2,33 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const projects = [
+    {
+    title: "Plein & Objedkow",
+    category: "Business Website",
+    year: "2026",
+    link: "https://po-gartenservice.com",
+    description: "A house and garden service company based in the Ramstein-Kaiserslautern region of Germany, offering lawn mowing, hedge trimming, garden design, property maintenance, decluttering, and pressure washing to local residents and the American military community.",
+  },
+  {
+    title: "Axtra Timber",
+    category: "Web Application",
+    year: "2026 - Present",
+    link: "https://axtratimber.onrender.com",
+    description: "An online platform for a timber and wood products business, built to showcase offerings and connect the company with customers digitally.",
+  },
+    {
+    title: "NdovuPay",
+    category: "Web Application",
+    year: "2025",
+    link: "https://ndovupay.org",
+    description: "NdovuPay is a secure and efficient payment gateway designed for African businesses. It enables seamless online transactions, supporting multiple payment methods to help businesses grow and thrive in the digital economy.",
+  },
   {
     title: "Chamify Africa",
     category: "Web Application",
     year: "2024",
     link: "https://chamify.africa",
     description: "Chamify is a user-friendly platform that helps individuals and groups save, invest, and access loans; all in one place. We make it easier to reach your financial goals, whether you're saving alone or with others.",
-  },
-  {
-    title: "NdovuPay",
-    category: "Web Application",
-    year: "2025",
-    link: "https://ndovupay.org",
-    description: "NdovuPay is a secure and efficient payment gateway designed for African businesses. It enables seamless online transactions, supporting multiple payment methods to help businesses grow and thrive in the digital economy.",
   }
 ];
 

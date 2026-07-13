@@ -5,6 +5,7 @@ import { useRef } from "react";
     // Languages
     { name: "Java", category: "Languages" },
     { name: "JavaScript", category: "Languages" },
+    { name: "Python", category: "Languages" },
     { name: "SQL", category: "Languages" },
     { name: "C++", category: "Languages" },
 

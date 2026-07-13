@@ -5,6 +5,7 @@ import profileHero from "@/assets/Profile.png";
 const HeroSection = () => {
   const [isMoving, setIsMoving] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [hasFinePointer, setHasFinePointer] = useState(true);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
@@ -13,6 +14,15 @@ const HeroSection = () => {
 
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => setIsMoving(false), 300);
+  }, []);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(pointer: fine)");
+    setHasFinePointer(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => setHasFinePointer(e.matches);
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
   useEffect(() => {
@@ -40,17 +50,17 @@ const HeroSection = () => {
         background: 'radial-gradient(circle, hsl(45 100% 58%), transparent 70%)',
       }} />
 
-      {/* Profile image - visible only when cursor moves */}
+      {/* Profile image - always visible on touch devices; fades in on cursor movement for pointer devices */}
       <div
-        className="absolute right-8 md:right-24 lg:right-32 top-1/2 -translate-y-1/2 pointer-events-none hidden md:block"
+        className="absolute right-4 md:right-24 lg:right-32 top-24 md:top-1/2 md:-translate-y-1/2 pointer-events-none"
         style={{
-          transform: `translate(${offsetX}px, calc(-50% + ${offsetY}px))`,
+          transform: hasFinePointer ? `translate(${offsetX}px, calc(-50% + ${offsetY}px))` : undefined,
           transition: 'transform 0.3s ease-out',
         }}
       >
         <div
-          className="relative w-[320px] lg:w-[420px] h-[420px] lg:h-[550px] transition-opacity duration-500 ease-in-out"
-          style={{ opacity: isMoving ? 1 : 0 }}
+          className="relative w-[160px] h-[210px] md:w-[320px] lg:w-[420px] md:h-[420px] lg:h-[550px] transition-opacity duration-500 ease-in-out"
+          style={{ opacity: hasFinePointer ? (isMoving ? 1 : 0) : 1 }}
         >
           {/* Glow behind image */}
           <div className="absolute inset-0 rounded-full blur-[80px] opacity-30" style={{
