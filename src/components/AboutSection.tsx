@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
+import { projects } from "@/components/ProjectsSection";
+
+const yearsExperience = new Date().getFullYear() - 2023;
 
 const stats = [
-  { number: "3+", label: "Years Experience" },
-  { number: "4", label: "Projects Delivered" },
+  { number: `${yearsExperience}+`, label: "Years Experience" },
+  { number: `${projects.length}`, label: "Projects Delivered" },
   { number: "50+", label: "Happy Clients" },
 ];
 

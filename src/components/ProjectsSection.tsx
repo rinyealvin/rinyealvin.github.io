@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const projects = [
+export const projects = [
     {
     title: "Plein & Objedkow",
     category: "Business Website",
