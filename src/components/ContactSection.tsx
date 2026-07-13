@@ -12,7 +12,7 @@ const ContactSection = () => {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
         className="text-center"
       >
         <p className="text-primary font-body text-sm tracking-widest uppercase mb-6">Get in Touch</p>
@@ -26,7 +26,7 @@ const ContactSection = () => {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        transition={{ duration: 0.25, delay: 0.05 }}
         className="mt-12 flex flex-col items-center gap-6"
       >
         <motion.a
@@ -44,14 +44,14 @@ const ContactSection = () => {
       <motion.div
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
-        transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.4, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         className="h-px bg-border mt-24 origin-left"
       />
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.7 }}
+        transition={{ duration: 0.25, delay: 0.15 }}
         className="mt-10 flex flex-col md:flex-row items-center justify-between gap-6"
       >
         <p className="text-muted-foreground font-body text-xs tracking-wide">

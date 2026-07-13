@@ -29,7 +29,7 @@ const ToolsSection = () => {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="text-primary font-body text-sm tracking-widest uppercase mb-4">Tools</p>
         <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground leading-tight">
@@ -43,7 +43,7 @@ const ToolsSection = () => {
             key={tool.name}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
+            transition={{ duration: 0.25, delay: 0.1 + i * 0.015 }}
             className="group flex flex-col items-center gap-3"
           >
             <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-secondary/50 border border-border flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:border-primary/50 group-hover:shadow-[0_0_20px_hsl(45_100%_58%/0.15)]">

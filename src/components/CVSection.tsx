@@ -10,7 +10,7 @@ const CVSection = () => {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="text-primary font-body text-sm tracking-widest uppercase mb-4">Resume</p>
         <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground leading-tight">
@@ -21,7 +21,7 @@ const CVSection = () => {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        transition={{ duration: 0.25, delay: 0.05 }}
         className="mt-16 max-w-xl"
       >
         <p className="text-muted-foreground font-body text-base md:text-lg leading-relaxed mb-8">

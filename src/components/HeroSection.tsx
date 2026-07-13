@@ -112,16 +112,16 @@ const HeroSection = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.25 }}
           className="text-muted-foreground font-body text-sm md:text-base tracking-widest uppercase mb-6"
         >
           Software Engineer
         </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.3, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-5xl md:text-7xl lg:text-[8rem] font-bold leading-[0.9] tracking-tight"
         >
           <span className="text-foreground">ALVIN</span>
@@ -132,14 +132,14 @@ const HeroSection = () => {
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
-          transition={{ duration: 1.2, delay: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.4, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="h-px bg-border mt-10 origin-left"
         />
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.4 }}
+          transition={{ duration: 0.3, delay: 0.15 }}
           className="flex items-center justify-between mt-6"
         >
           <p className="text-muted-foreground text-sm font-body">Based in Ebene-CyberCity, Mauritius</p>

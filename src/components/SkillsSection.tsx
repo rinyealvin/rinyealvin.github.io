@@ -62,7 +62,7 @@ const SkillsSection = () => {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="text-primary font-body text-sm tracking-widest uppercase mb-4">Skills</p>
         <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground leading-tight">
@@ -76,7 +76,7 @@ const SkillsSection = () => {
             key={skill.name}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: 0.3 + i * 0.08 }}
+            transition={{ duration: 0.2, delay: 0.1 + i * 0.01 }}
             whileHover={{ scale: 1.05, y: -4 }}
             className="group relative px-6 py-4 rounded-xl border border-border bg-secondary/30 cursor-default transition-colors duration-300 hover:border-primary/50 hover:bg-secondary/60"
           >

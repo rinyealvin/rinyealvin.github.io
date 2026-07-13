@@ -18,10 +18,10 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      initial={{ y: -80, opacity: 0 }}
+      initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed top-0 left-0 right-0 z-50 section-padding py-6 flex items-center justify-between mix-blend-difference"
+      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+      className="fixed top-0 left-0 right-0 z-50 section-padding py-6 flex items-center justify-between bg-background/60 backdrop-blur-sm"
     >
       <a href="#" className="font-display text-xl font-bold text-foreground tracking-tight">
         Rinye Alvin Ngamau<span className="text-gradient">.</span>
