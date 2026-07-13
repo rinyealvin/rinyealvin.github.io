@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
@@ -42,8 +43,9 @@ const Navbar = () => {
       {/* Mobile toggle */}
       <button
         onClick={() => setMenuOpen(!menuOpen)}
-        className="md:hidden flex flex-col gap-1.5 z-50"
+        className="md:hidden flex flex-col gap-1.5 z-50 relative"
         aria-label="Toggle menu"
+        aria-expanded={menuOpen}
       >
         <motion.span
           animate={menuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
@@ -59,33 +61,38 @@ const Navbar = () => {
         />
       </button>
 
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-background flex flex-col items-center justify-center gap-10"
-          >
-            {navItems.map((item, i) => (
-              <motion.a
-                key={item.label}
-                href={item.href}
+      {/* Dropdown menu — portaled out of the blend-mode nav so its colors render normally */}
+      {createPortal(
+        <AnimatePresence>
+          {menuOpen && (
+            <>
+              <div
+                className="fixed inset-0 z-40 md:hidden"
                 onClick={() => setMenuOpen(false)}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 30 }}
-                transition={{ delay: i * 0.1, duration: 0.4 }}
-                className="text-4xl font-display font-bold text-foreground hover:text-gradient transition-colors"
+              />
+              <motion.div
+                initial={{ opacity: 0, scale: 0.92, y: -8 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.92, y: -8 }}
+                transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                className="fixed top-20 right-6 z-50 w-56 rounded-2xl border border-border bg-background/95 backdrop-blur-xl shadow-2xl p-2 origin-top-right md:hidden"
               >
-                {item.label}
-              </motion.a>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+                {navItems.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="block px-4 py-3 rounded-xl text-sm font-body font-medium text-muted-foreground tracking-wide uppercase hover:text-foreground hover:bg-secondary/60 transition-colors duration-200"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </motion.nav>
   );
 };
