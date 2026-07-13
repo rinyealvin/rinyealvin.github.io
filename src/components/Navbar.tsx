@@ -49,14 +49,17 @@ const Navbar = () => {
       >
         <motion.span
           animate={menuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+          transition={{ duration: 0.15, ease: [0.22, 1, 0.36, 1] }}
           className="block w-6 h-0.5 bg-foreground"
         />
         <motion.span
           animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
+          transition={{ duration: 0.1 }}
           className="block w-6 h-0.5 bg-foreground"
         />
         <motion.span
           animate={menuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+          transition={{ duration: 0.15, ease: [0.22, 1, 0.36, 1] }}
           className="block w-6 h-0.5 bg-foreground"
         />
       </button>
@@ -74,8 +77,8 @@ const Navbar = () => {
                 initial={{ opacity: 0, scale: 0.92, y: -8 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.92, y: -8 }}
-                transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                className="fixed top-20 right-6 z-50 w-56 rounded-2xl border border-border bg-background/95 backdrop-blur-xl shadow-2xl p-2 origin-top-right md:hidden"
+                transition={{ duration: 0.15, ease: [0.22, 1, 0.36, 1] }}
+                className="fixed top-20 right-6 z-50 w-56 rounded-2xl border border-border bg-background/95 backdrop-blur-md shadow-xl p-2 origin-top-right md:hidden"
               >
                 {navItems.map((item) => (
                   <a
