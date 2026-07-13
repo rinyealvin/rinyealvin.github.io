@@ -1,17 +1,15 @@
-import { motion, useInView } from "framer-motion";
-import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 import { FileText, Download } from "lucide-react";
 
 const CVSection = () => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id="cv" className="py-24 md:py-40 section-padding" ref={ref}>
+    <section id="cv" className="py-24 md:py-40 section-padding">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="text-primary font-body text-sm tracking-widest uppercase mb-4">Resume</p>
@@ -22,7 +20,7 @@ const CVSection = () => {
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
         className="mt-16 max-w-xl"
       >

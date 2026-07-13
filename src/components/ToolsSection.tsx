@@ -1,5 +1,4 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const tools = [  
   { name: "IntelliJ", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" },
@@ -25,14 +24,11 @@ const tools = [
 ];
 
 const ToolsSection = () => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section id="tools" className="py-24 md:py-40 section-padding" ref={ref}>
+    <section id="tools" className="py-24 md:py-40 section-padding">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="text-primary font-body text-sm tracking-widest uppercase mb-4">Tools</p>
@@ -46,7 +42,7 @@ const ToolsSection = () => {
           <motion.div
             key={tool.name}
             initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
             className="group flex flex-col items-center gap-3"
           >

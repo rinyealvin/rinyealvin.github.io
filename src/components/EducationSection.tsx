@@ -1,5 +1,4 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const education = [
   {
@@ -17,14 +16,11 @@ const education = [
 ];
 
 const EducationSection = () => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section id="education" className="py-24 md:py-40 section-padding" ref={ref}>
+    <section id="education" className="py-24 md:py-40 section-padding">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="text-primary font-body text-sm tracking-widest uppercase mb-4">Education</p>
@@ -38,7 +34,7 @@ const EducationSection = () => {
           <motion.div
             key={edu.school}
             initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 + i * 0.15 }}
             className="group border-t border-border py-8 md:py-10 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 md:gap-12 items-start"
           >

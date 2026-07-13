@@ -1,5 +1,4 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const projects = [
     {
@@ -33,14 +32,10 @@ const projects = [
 ];
 
 const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
     <motion.div
-      ref={ref}
       initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
       className="group cursor-pointer"
     >
@@ -80,14 +75,11 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
 };
 
 const ProjectsSection = () => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section id="work" className="py-24 md:py-40 section-padding" ref={ref}>
+    <section id="work" className="py-24 md:py-40 section-padding">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="flex items-end justify-between mb-16"
       >

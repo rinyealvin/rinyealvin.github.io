@@ -1,9 +1,6 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const ContactSection = () => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
   const socialLinks = [
     { name: "GitHub", url: "https://github.com/rinyealvin" },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/alvin-rinye-b47718288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
@@ -11,10 +8,10 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 md:py-40 section-padding" ref={ref}>
+    <section id="contact" className="py-24 md:py-40 section-padding">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         className="text-center"
       >
@@ -28,7 +25,7 @@ const ContactSection = () => {
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
         className="mt-12 flex flex-col items-center gap-6"
       >
@@ -46,14 +43,14 @@ const ContactSection = () => {
 
       <motion.div
         initial={{ scaleX: 0 }}
-        animate={inView ? { scaleX: 1 } : {}}
+        animate={{ scaleX: 1 }}
         transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
         className="h-px bg-border mt-24 origin-left"
       />
 
       <motion.div
         initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.7 }}
         className="mt-10 flex flex-col md:flex-row items-center justify-between gap-6"
       >

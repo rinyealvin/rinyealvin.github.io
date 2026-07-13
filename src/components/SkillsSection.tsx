@@ -1,5 +1,4 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
   const skills = [
     // Languages
@@ -58,14 +57,11 @@ import { useRef } from "react";
   ];
 
 const SkillsSection = () => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section id="skills" className="py-24 md:py-40 section-padding" ref={ref}>
+    <section id="skills" className="py-24 md:py-40 section-padding">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="text-primary font-body text-sm tracking-widest uppercase mb-4">Skills</p>
@@ -79,7 +75,7 @@ const SkillsSection = () => {
           <motion.div
             key={skill.name}
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: 0.3 + i * 0.08 }}
             whileHover={{ scale: 1.05, y: -4 }}
             className="group relative px-6 py-4 rounded-xl border border-border bg-secondary/30 cursor-default transition-colors duration-300 hover:border-primary/50 hover:bg-secondary/60"

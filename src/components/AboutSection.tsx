@@ -1,5 +1,4 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const stats = [
   { number: "3+", label: "Years Experience" },
@@ -8,14 +7,11 @@ const stats = [
 ];
 
 const AboutSection = () => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section id="about" className="py-24 md:py-40 section-padding" ref={ref}>
+    <section id="about" className="py-24 md:py-40 section-padding">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
         <p className="text-primary font-body text-sm tracking-widest uppercase mb-4">About</p>
@@ -28,7 +24,7 @@ const AboutSection = () => {
 
       <motion.p
         initial={{ opacity: 0, y: 30 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         className="mt-10 text-muted-foreground font-body text-base md:text-lg max-w-2xl leading-relaxed"
       >
@@ -38,7 +34,7 @@ const AboutSection = () => {
 
       <motion.div
         initial={{ scaleX: 0 }}
-        animate={inView ? { scaleX: 1 } : {}}
+        animate={{ scaleX: 1 }}
         transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         className="h-px bg-border mt-16 origin-left"
       />
@@ -48,7 +44,7 @@ const AboutSection = () => {
           <motion.div
             key={stat.label}
             initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 + i * 0.15 }}
           >
             <p className="font-display text-5xl md:text-6xl font-bold text-gradient">{stat.number}</p>
