@@ -4,7 +4,7 @@ import { projects } from "@/components/ProjectsSection";
 const yearsExperience = new Date().getFullYear() - 2023;
 
 const stats = [
-  { number: `${yearsExperience}+`, label: "Years Experience" },
+  { number: `${yearsExperience}`, label: "Years Experience" },
   { number: `${projects.length}`, label: "Projects Delivered" },
   { number: "50+", label: "Happy Clients" },
 ];
