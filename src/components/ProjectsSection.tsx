@@ -57,7 +57,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
           <h3 className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-foreground group-hover:text-gradient transition-all duration-500">
             {project.title}
           </h3>
-          <p className="text-muted-foreground font-body text-sm md:text-base mt-3 max-w-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <p className="text-muted-foreground font-body text-sm md:text-base mt-3 max-w-xl">
             {project.description}
           </p>
         </div>

@@ -92,6 +92,8 @@ const HeroSection = () => {
             alt="Profile"
             width={768}
             height={1024}
+            fetchPriority="high"
+            decoding="async"
             className="relative z-10 w-full h-full object-contain object-bottom drop-shadow-2xl"
             style={{
               filter: `grayscale(30%) contrast(1.1)`,
