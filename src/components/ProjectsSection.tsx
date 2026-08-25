@@ -8,13 +8,13 @@ export const projects = [
     link: "https://po-gartenservice.com",
     description: "A house and garden service company based in the Ramstein-Kaiserslautern region of Germany, offering lawn mowing, hedge trimming, garden design, property maintenance, decluttering, and pressure washing to local residents and the American military community.",
   },
-  {
-    title: "Axtra Timber",
-    category: "Web Application",
-    year: "2026 - Present",
-    link: "https://axtratimber.onrender.com",
-    description: "An online platform for a timber and wood products business, built to showcase offerings and connect the company with customers digitally.",
-  },
+  // {
+  //   title: "Axtra Timber",
+  //   category: "Web Application",
+  //   year: "2026 - Present",
+  //   link: "https://axtratimber.onrender.com",
+  //   description: "An online platform for a timber and wood products business, built to showcase offerings and connect the company with customers digitally.",
+  // },
     {
     title: "NdovuPay",
     category: "Web Application",
